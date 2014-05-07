@@ -41,7 +41,7 @@ namespace Ninject.Web.WebApi
         /// <summary>
         /// Loads the module into the kernel.
         /// </summary>
-        public override void Load()
+        public override void OnInternalLoad()
         {
             this.Kernel.Components.Add<INinjectHttpApplicationPlugin, NinjectWebApiHttpApplicationPlugin>();
             this.Kernel.Components.Add<IWebApiRequestScopeProvider, DefaultWebApiRequestScopeProvider>();
